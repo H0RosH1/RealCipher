@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "Courgette";
+    src: url('../font/Courgette-Regular.ttf');
+}
+@font-face {
+    font-family: "thai-sans";
+    src: url('../font/thaisanslite_r1.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contioner {
+    background: url('../img/bg_game.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 812px;
+    height: 100vh;
+    
+}
+
+.contion {
+    background-color: rgba(0, 0, 0, 0.274);
+    width: 100%;
+    min-height: 812px;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.274);
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'thai-sans';
+}
+
+.online_player p {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    display: block;
+    user-select: none;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgb(228, 228, 0);
+    border-radius: 45px;
+    
+    width: 65px;
+    height: 65px;
+}
+
+.fa-user{
+    color: rgb(5, 182, 43);
+    font-size: 32px;
+}
+.fa-question{
+    font-size: 48px;
+    color: white;
+
+}
+
+
+
+.box h1 {
+    font-size: 162px;
+    text-align: center;
+    text-shadow: 5px 5px 35px #FF0000;
+    color: white;
+    margin: 20px 0 50px;
+    font-weight: 300;
+    user-select: none;
+    font-weight: 900;
+    font-family: 'thai-sans';
+}
+
+.box h3{
+    font-size: 72px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-family: 'thai-sans';
+}
+
+.box a{
+    text-decoration: none;
+}
+
+.box a button{
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: url('../img/box5.png');
+    font-size: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-family: 'thai-sans';
+    display: block;
+    margin: 100px auto 0;
+    padding: 0 50px 10px;
+    font-weight: 900;
+}
+
+.box a button:active{
+    border: 2px solid green;
+    margin: 98px auto -2px;
+}
+
+
+
+.test:target{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 0.349);
+    
+}
+
+.popup {
+    position: fixed;
+    padding: 20px 50px;
+    width: 35%;
+    box-sizing: content-box;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    color: #000;
+    transform: translate(-50%, -50%);
+    background-color: rgb(247, 241, 160);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+}
+
+.test:target .popup {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.popup .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px 10px;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    border-radius: 90px;
+    text-decoration: none;
+    transition: color .3s;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.popup .close:hover {
+    color: rgb(148, 148, 148);
+}
+
+.popup:target+.close-popup {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.content {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.content h3{
+    font-size: 48px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.content p {
+    margin: 15px 0;
+    font-size: 30px;
+    line-height: 35px;
+    font-family: 'thai-sans';
+}
+
+.pw {
+    width: 100%;
+    background-color: orange;
+    letter-spacing: 15px;
+    text-align: center;
+    font-size: 40px !important;
+    font-weight: 800;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.bid{
+    font-weight: 800;
+}
+
+
+@media (max-width: 1024px) {
+    .box h1 {
+        font-size: 120px;
+    }
+    .box h3 {
+        font-size: 60px;
+    }
+    .content p {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .pw {
+        font-size: 32px !important;
+    }
+    .popup {
+        width: 50%;
+    }
+  }
+@media (max-width: 768px) {
+    .box h1 {
+        font-size: 94px;
+    }
+    .box h3 {
+        font-size: 48px;
+    }
+    .box a {
+        font-size: 32px;
+    }
+    .popup {
+        width: 75%;
+    }
+
+  }
+@media (max-width: 425px) {
+    .contioner {
+        
+        background-size: 250% 100%;
+    }
+    .box h1 {
+        font-size: 64px;
+    }
+    .box h3 {
+        font-size: 36px;
+    }
+
+    .box a button{
+        font-size: 36px;
+        margin: 30px auto;
+    }
+    .content h3 {
+        font-size: 36px;
+    }
+
+    .content p {
+        font-size: 24px;
+        line-height: 36px;
+        
+    }
+    .pw {
+        font-size: 26px !important;
+        width: 85%;
+    }
+    .popup {
+        width: 90%;
+        padding: 10px 15px;
+        
+    }
+    input[type="text" i]{
+        width: 90%;
+        font-size: 24px;
+        
+    }
+    input[type="submit" i]{
+        font-size: 36px;
+        padding: 0 50px 10px;
+    }
+
+    .online_player p {
+        font-size: 24px;
+    }
+    
+    .fa-question,.fa-question{
+        font-size: 20px;
+    }
+
+    footer a {
+        width: 45px;
+        height: 45px;
+    }
+  }

@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "Courgette";
+    src: url('../font/Courgette-Regular.ttf');
+}
+@font-face {
+    font-family: "VINTAGE";
+    src: url('../font/VINTAGE\ COLLEGE\ DEPT_worn.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contioner {
+    background: url('../img/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.contion {
+    background-color: rgba(0, 0, 0, 0.274);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box h1 {
+    font-size: 162px;
+    text-align: center;
+    color: white;
+    margin: 0 0 50px;
+    font-weight: 300;
+    user-select: none;
+    font-family: 'Courgette';
+    text-shadow: 8px 5px 5px black;
+}
+
+.box a {
+    text-decoration: none;
+    letter-spacing: 10px;
+    text-align: center;
+    display: block;
+    font-size: 60px;
+    color: white;
+    user-select: none;
+    font-family: "VINTAGE";
+    transition: color .3s;
+}
+
+.box a:hover {
+    color: silver;
+    transition: .4s;
+}
+
+.box a:active {
+    color: rgb(249, 253, 2);
+    transition: .3s;
+}
+
+@media (max-width: 1024px) {
+    .box h1 {
+        font-size: 120px;
+    }
+  }
+@media (max-width: 768px) {
+    .box h1 {
+        font-size: 94px;
+    }
+    .box a {
+        font-size: 32px;
+    }
+  }
+@media (max-width: 425px) {
+    .contioner {
+        
+        background-size: 250% 100%;
+    }
+    .box h1 {
+        font-size: 48px;
+    }
+  }
